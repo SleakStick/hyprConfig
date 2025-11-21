@@ -1,7 +1,7 @@
 * {
-    font: "JetBrains Mono Nerd 12";
+    font: "JetBrains Mono Nerd Font 10";
     background:#1a1a4d;
-    background-window:#1a1a4d85;
+    background-window:#1a1a4d;
     foreground:#4d80cc; 
     background-color:transparent;
     spacing:2;
@@ -10,8 +10,8 @@
     overlay-bg:#3333e6; 
     case-indicator:#e600e6; 
     input-bar:#e600e6; 
-    element1:#09295f80;
-    element2:#001a4d80;
+    element1:#1a1a4d;
+    element2:#1a1a4d;
     select-color:#8099e6; 
     listview-border:#1a1a1a; 
 }
@@ -46,7 +46,7 @@ element-icon {
     text-color:       var(text-color);
 }
 window {
-    width: 400px;
+    width: 350px;
     transparency: "real";
     padding:          5;
     background-color: var(background-window);
