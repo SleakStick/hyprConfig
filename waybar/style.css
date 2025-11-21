@@ -46,10 +46,18 @@ window#waybar.hidden {
   padding-left:15px;
   padding-right:15px;
 }
+#bluetooth button:hover {
+  border: 1px solid #99b3e6; 
+  color: #ccccff;
+}
 #network {
   padding-left:15px;
   padding-right:15px;
   border-left: 2px solid #ccccff;
+}
+#network button:hover {
+  border: 1px solid #99b3e6; 
+  color: #ccccff;
 }
 #pulseaudio {
   padding-left:15px;
