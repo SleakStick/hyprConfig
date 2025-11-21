@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "sway/mode"],
-    "modules-center": ["battery", "clock", "temperature", "memory"],
+    "modules-center": ["battery","power-profiles-daemon", "clock", "temperature", "memory"],
     "modules-right": ["bluetooth", "network", "pulseaudio"],
     "sway/window": {
         "max-length": 50
@@ -22,6 +22,20 @@
       		"Virtual-1": [1, 2, 3, 4, 5]
     		}
         },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+
     "battery": {
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
@@ -65,7 +79,7 @@
 		"default": ["", ""]
 	},
 	"scroll-step": 1,
-	"on-click": "bash /home/ben/.config/waybar/rofiConfigs/audio.sh"
+	"on-click": "bash /home/ben/.config/waybar/scripts/audio.sh"
 },
 "network": {
 	"interface": "wlan0",
@@ -79,5 +93,14 @@
 	"tooltip-format-disconnected": "Disconnected",
 	"max-length": 50,
   "on-click":"/home/ben/.config/waybar/rofi-network-manager/src/ronema"
-}
+},
+
+"group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "bluetooth",
+            "network",
+            "pulseaudio"
+        ]
+    }
 }
