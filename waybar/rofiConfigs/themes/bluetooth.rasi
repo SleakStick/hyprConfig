@@ -62,8 +62,6 @@ listview {
     lines: 8;
     columns: 1;
     fixed-height: 0;
-    border-top:       2px;
-    border-color:#ffffff; 
 
 }
 inputbar {
