@@ -1,0 +1,24 @@
+/*https://manpages.org/rofi*/
+configuration {
+  lines: 5;
+  location: 0;
+	font: "JetBrains Mono 12";
+	fixed-num-lines: false;
+	show-icons: true;
+  terminal: "kitty";
+  run-command: "{cmd}";
+	disable-history: false;
+	sort: false;
+	sorting-method: "normal";
+	case-sensitive: false;
+	matching: "normal";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@theme "main.rasi"
