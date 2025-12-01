@@ -2,6 +2,7 @@
   font-family: JetBrains Mono Nerd Font;
   font-size: 13px;
   border: none;
+  color: #ffffff;
 }
 window#waybar {
     background: #1a1a4d; 
@@ -26,10 +27,10 @@ tooltip label {
 #workspaces {
   padding-left:15px;
   padding-right:15px;
+  color: #ffffff;
   border-right: 2px solid #ccccff;
 }
 #workspaces button:hover {
-
   border: 1px solid #99b3e6; 
   color: #ccccff;
   background: transparent;
