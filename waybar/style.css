@@ -35,6 +35,29 @@ tooltip label {
   color: #ccccff;
   background: transparent;
 }
+#backlight-slider {
+
+}
+#backlight-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 1;
+    background-image: none;
+    border: none;
+    box-shadow: none; 
+}
+#backlight-slider trough {
+    min-height: 7px;
+    min-width: 70px;
+    border-radius: 5px;
+    background-color:#1a1a4d;
+    border: 1px solid #ccccff;
+}
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: #ccccff;
+}
 #power-profiles-daemon{
   padding-right:15px;
 }
@@ -54,6 +77,7 @@ tooltip label {
 }
 
 #bluetooth {
+  border-left:2px solid #ccccff;
   padding-left:15px;
   padding-right:15px;
   transition: all 0.3s ease;
