@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "sway/mode"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["battery","power-profiles-daemon", "clock", "temperature", "memory"],
-    "modules-right": ["bluetooth", "network", "pulseaudio"],
+    "modules-right": ["backlight/slider","bluetooth", "network", "pulseaudio"],
     "sway/window": {
         "max-length": 50
     },
@@ -16,16 +16,24 @@
 			"4": "",
 			"5": "",
 			"active": "",
-			"default": ""
+			"default": ""
     		},
         "persistent-workspaces": {
       		"Virtual-1": [1, 2, 3, 4, 5]
     		}
         },
+    "backlight/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal",
+      "format":"{percentage}%{icon}",
+      "scroll-step":30,
+      "format-icons": ["󰃞","󰃟","󰃠"]
+    },
 
     "power-profiles-daemon": {
       "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+      "tooltip-format": "Power profile: {profile}",
       "tooltip": true,
       "format-icons": {
         "default": "",
