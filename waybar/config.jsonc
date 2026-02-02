@@ -1,5 +1,6 @@
 {
     "layer": "top",
+    "position":"top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["battery","power-profiles-daemon", "clock", "temperature", "memory"],
     "modules-right": ["backlight/slider","bluetooth", "network", "pulseaudio"],
@@ -108,10 +109,10 @@
 		"default": ["", ""]
 	},
 	"scroll-step": 1,
-	"on-click": "bash /home/ben/.config/waybar/scripts/audio.sh"
+	"on-click": "bash /home/ben/.config/waybar/scripts/src/rofi-mixer -width 100px -config /home/ben/.config/waybar/rofiConfigs/themes/audio.rasi -location 3 -kb-cancel 'MousePrimary' -hover-select true"
 },
 "network": {
-	"interface": "wlan0",
+	"interface": "wlp0s20f3",
 	"format": "{ifname}",
 	"format-wifi": "{essid} ",
 	"format-ethernet": "{ifname} ",
