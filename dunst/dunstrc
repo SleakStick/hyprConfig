@@ -1,0 +1,15 @@
+[global]
+    # Background color (use hex color codes)
+    background = "#1a1a4d"
+
+    # Border radius for rounded corners
+    corner_radius = 10
+
+    # Border width and color
+    border_width = 4
+    border_color = "#ccccff"
+
+    # Padding around text
+    padding = 15
+    
+    font = "Jetbrains mono Nerd Font 12"
