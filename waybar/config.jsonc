@@ -1,0 +1,136 @@
+{
+    "layer": "top",
+    "position":"top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["battery","power-profiles-daemon", "clock", "temperature", "memory"],
+    "modules-right": ["backlight/slider","bluetooth", "network", "pulseaudio"],
+    "sway/window": {
+        "max-length": 50
+    },
+
+    "hyprland/workspaces": {
+		"format": "{name} : {icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"active": "",
+			"default": ""
+    		},
+        "persistent-workspaces": {
+      		"Virtual-1": [1, 2, 3, 4, 5]
+    		}
+        },
+    "backlight/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal",
+      "format":"{percentage}%{icon}",
+      "scroll-step":30,
+      "format-icons": ["󰃞","󰃟","󰃠"]
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "interval": 10,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+	      "calendar": {
+		    "mode"          : "month",
+		    "mode-mon-col"  : 3,
+		    "weeks-pos"     : "right",
+		    "on-scroll"     : 1,
+		    "on-click": "mode",
+		    "format": {
+			    "months":     "<span color='#ffffff'><b>{}</b></span>",
+			    "days":       "<span color='#ffffff'><b>{}</b></span>",
+			    "weekdays":   "<span color='#ffffff'><b>{}</b></span>",
+			    "today":      "<span color='#8099e6'><b><u>{}</u></b></span>"
+		    }
+	    },
+	    "actions": {
+		    "on-click": "mode",
+		    "on-click-forward": "tz_up",
+		    "on-click-backward": "tz_down",
+		    "on-scroll-up": "shift_up",
+		    "on-scroll-down": "shift_down"
+	    }
+    },
+    "temperature":{
+        "thermal-zone": 0, 
+        "critical-threshold": 80, 
+        "format": " :{temperatureC}°C",
+        "format-critical": " {temperatureC}°C", 
+        "interval": 5
+    },
+    "memory":{
+          "format": ":{used:0.1f}Gb",
+          "tooltip":true,
+          "interval":5
+    },
+
+    
+"bluetooth": {
+	"format": " {status}",
+	"format-disabled": "",
+	"format-connected": " 󰂱 {num_connections} ",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "rofi-bluetooth -config /home/ben/.config/waybar/rofiConfigs/themes/bluetooth.rasi -location 3 -kb-cancel 'MousePrimary' -hover-select true"
+
+},
+"pulseaudio": {
+	"format": "{volume}% {icon}",
+	"format-bluetooth": "{volume}% {icon}",
+	"format-muted": "",
+	"format-icons": {
+		"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+		"alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+		"headphones": "",
+		"default": ["", ""]
+	},
+	"scroll-step": 1,
+	"on-click": "bash /home/ben/.config/waybar/scripts/src/rofi-mixer -width 100px -config /home/ben/.config/waybar/rofiConfigs/themes/audio.rasi -location 3 -kb-cancel 'MousePrimary' -hover-select true"
+},
+"network": {
+	"interface": "wlp0s20f3",
+	"format": "{ifname}",
+	"format-wifi": "{essid} ",
+	"format-ethernet": "{ifname} ",
+	"format-disconnected": "",
+	"tooltip-format": "{ifname}",
+	"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+	"tooltip-format-ethernet": "{ifname} ",
+	"tooltip-format-disconnected": "Disconnected",
+	"max-length": 50,
+  "on-click":"/home/ben/.config/waybar/rofi-network-manager/src/ronema"
+},
+
+"group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "bluetooth",
+            "network",
+            "pulseaudio"
+        ]
+    }
+}

@@ -1,0 +1,86 @@
+* {
+    font: "JetBrains Mono Nerd Font 10";
+    background:#1a1a4d;
+    background-window:#1a1a4d;
+    foreground:#4d80cc; 
+    background-color:transparent;
+    spacing:2;
+    text-color:#e6e6e6; 
+    overlay-fg:#e60033; 
+    overlay-bg:#3333e6; 
+    case-indicator:#e600e6; 
+    input-bar:#e600e6; 
+    element1:#1a1a4d;
+    element2:#1a1a4d;
+    select-color:#8099e6; 
+    listview-border:#1a1a1a; 
+}
+
+element {
+    padding: 1px ;
+    cursor:  pointer;
+    spacing: 1px ;
+    border:  0;
+    border-radius: 5px;
+}
+element normal.normal {
+    background-color: var(element1);
+    text-color:       var(text-color);
+    padding:2px;
+}
+element selected.normal {
+    background-color: var(select-color);
+    text-color:      var(text-color);
+}
+element alternate.normal {
+    background-color: var(element2);
+    text-color:       var(text-color);
+    padding:2px;
+}
+
+
+element-icon {
+    background-color: transparent;
+    size:             1.5000em ;
+    cursor:           inherit;
+    text-color:       var(text-color);
+}
+window {
+    width: 350px;
+    transparency: "real";
+    padding:          5;
+    background-color: var(background-window);
+    border:           1;
+    border-radius: 10px;
+}
+textbox {
+    text-color: var(text-color);
+}
+listview {
+    padding:       4px;
+    spacing:      2px ;
+    lines: 5;
+    columns: 1;
+    fixed-height: 0;
+    border:       2px;
+}
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: var(text-color);
+    children:   [ "entry","case-indicator" ];
+}
+overlay {
+    padding:          0px 0.2000em ;
+    background-color: var(overlay-fg);
+    foreground-color: var(overlay-bg);
+    margin:           0px 0.2000em ;
+    text-color:       var(text-color);
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(text-color);
+}
+
+
+
