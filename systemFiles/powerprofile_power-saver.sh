@@ -1,0 +1,1 @@
+/bin/powerprofile_power-saver.sh

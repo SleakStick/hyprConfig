@@ -1,0 +1,1 @@
+/bin/powerprofile_performance.sh
